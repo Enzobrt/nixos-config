@@ -12,6 +12,7 @@
     syncthing
     libreoffice
     git
+    gh
   #  wget
   ];
 }
