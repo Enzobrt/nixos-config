@@ -13,7 +13,7 @@
     ];
 
   # Enable flakes and nix cli
-  nix.settings.experimental-features = [ "nix-command", "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -92,7 +92,7 @@
   environment.variables = {
   	EDITOR = "nvim";
 	VISUAL = "nvim";
-  }
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -122,5 +122,5 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   # Environment variables
-  nix.nixPath = [ "nixpkgs=/home/enzo/Documents/nixos-config" ]
+  nix.nixPath = [ "nixpkgs=/home/enzo/Documents/nixos-config" ];
 }
