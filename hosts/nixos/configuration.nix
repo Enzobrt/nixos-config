@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -87,7 +87,7 @@
   # services.xserver.libinput.enable = true;
 
   # Optimal hardware Configuration
-  hardware.opengl = {
+  hardware.graphics = {
   	enable = true;
 	# driSupport = true;
 	# driSupport32Bit = true;

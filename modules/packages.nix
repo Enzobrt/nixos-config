@@ -18,7 +18,7 @@
     syncthing
     libreoffice
     mpv
-    gimp
+    gimp3
     audacity
     obs-studio
     zathura
