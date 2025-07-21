@@ -22,6 +22,7 @@
     audacity
     obs-studio
     zathura
+    discord
     # Programar
     git
     gh
