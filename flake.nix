@@ -4,15 +4,19 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    stylix.url = "github:danth/stylix";
-
+    
     home-manager = {
     	url = "github:nix-community/home-manager";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager,... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, stylix, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -26,7 +30,7 @@
   		home-manager.backupFileExtension = "backup";
 		home-manager.users.enzo = import ./hosts/nixos/home.nix;
 	}
-	inputs.stylix.nixosModules.stylix
+	stylix.nixosModules.stylix
       ];
     };
   };
