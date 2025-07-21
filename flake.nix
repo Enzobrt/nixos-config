@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    stylix.url = "github:danth/stylix";
 
     home-manager = {
     	url = "github:nix-community/home-manager";
@@ -25,7 +26,7 @@
   		home-manager.backupFileExtension = "backup";
 		home-manager.users.enzo = import ./hosts/nixos/home.nix;
 	}
-        # { home-manager.users.enzo = import ./home.nix; }
+	inputs.stylix.nixosModules.stylix
       ];
     };
   };

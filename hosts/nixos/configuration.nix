@@ -30,6 +30,23 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Activate Stylix
+  # stylix.enable = true;
+  
+  # Theme
+  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+
+  # Wallpaper
+  # stylix.image = ./inazuma.jpg;
+
+  # Font
+  # stylix.fonts = {
+    # monospace = {
+      # package = pkgs.nerdfonts.override {fonts = [ProFont];};
+      # name = "ProFont Nerd Font Mono";
+    # };
+  # };
+
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 

@@ -11,6 +11,9 @@
     lf
     btop
     wget
+    git
+    gh
+    tree
     # Utilidades
     obsidian
     brave
@@ -23,9 +26,6 @@
     obs-studio
     zathura
     discord
-    # Programar
-    git
-    gh
     # Gaming
     retroarch
     heroic
