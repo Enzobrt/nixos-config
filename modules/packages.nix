@@ -29,6 +29,7 @@
     # Gaming
     retroarch
     heroic
+    modrinth-app
   ];
 
   # steam

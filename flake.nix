@@ -9,14 +9,9 @@
     	url = "github:nix-community/home-manager";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, stylix, ... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -30,7 +25,6 @@
   		home-manager.backupFileExtension = "backup";
 		home-manager.users.enzo = import ./hosts/nixos/home.nix;
 	}
-	stylix.nixosModules.stylix
       ];
     };
   };
