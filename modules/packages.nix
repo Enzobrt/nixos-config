@@ -27,7 +27,7 @@
     zathura
     discord
     # Gaming
-    retroarch
+    retroarch-full
     heroic
     modrinth-app
   ];
